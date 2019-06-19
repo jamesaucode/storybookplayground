@@ -3,11 +3,30 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+button {
+	padding: 0.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.spinner {
+	border-radius: 50%;
+	height: 3em;
+	width: 3em;
+	border-left: 0.5em solid rgba(0,0,0,0.1);
+	border-right: 0.5em solid rgba(0,0,0,0.1);
+	border-bottom: 0.5em solid rgba(0,0,0,0.1);
+	border-top: 0.5em solid rgba(0,0,0,0.75);
+	animation: 1s infinite linear spin;
+}
+
+.image {
+	max-height: 400px;
 }
